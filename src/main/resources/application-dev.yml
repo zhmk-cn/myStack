@@ -1,0 +1,24 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/mystack?characterEncoding=utf-8&useSSL=false&zeroDateTimeBehavior=round&allowMultiQueries=true
+    username: root
+    password: root
+    driver-class-name: net.sf.log4jdbc.DriverSpy
+    filters: stat
+    maxActive: 200
+    initialSize: 1
+    maxWait: 120000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 120000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 1
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 200
+
+Swagger-Enable: true
