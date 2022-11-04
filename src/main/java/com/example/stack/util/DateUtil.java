@@ -69,4 +69,10 @@ public class DateUtil {
         final Date date = Date.from(zdt.toInstant());
         return date;
     }
+
+
+        public static void main(String[] args) {
+            Runnable t1 = ()-> System.out.println(1);
+            t1.run();
+        }
 }
