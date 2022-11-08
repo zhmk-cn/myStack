@@ -86,9 +86,9 @@ public class ReflectAsmService {
         List <String> list = new ArrayList <>();
         list.add("1");
         list.add("2");
-        /*list.stream().forEach(item ->{
+        list.stream().forEach(item ->{
             System.out.println(item);
-        });*/
+        });
         for (String s : list) {
             System.out.println(s);
         }
