@@ -6,6 +6,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * 需要配合 数据库表
+ */
 @Component
 public class SchedulerLockTestJob {
 
