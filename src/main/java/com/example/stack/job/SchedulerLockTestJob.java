@@ -18,7 +18,7 @@ public class SchedulerLockTestJob {
 
 
     @Scheduled(cron = "0 0/1 * * * ? ")
-    @SchedulerLock(name = "PRC_S4_Migration", lockAtMostFor = SYSUSERMOST, lockAtLeastFor = SYSUSERLEAST)
+    @SchedulerLock(name = "SchedulerLockTestJob", lockAtMostFor = SYSUSERMOST, lockAtLeastFor = SYSUSERLEAST)
     //任务名称必须唯一 ，lockAtMostFor最长锁表时间：（防止节点奔溃，不释放锁） lockAtLeastFor 最短锁表     //时间,防止任务重复跑
     @Transactional(rollbackFor = Exception.class)
     public void execute(){
