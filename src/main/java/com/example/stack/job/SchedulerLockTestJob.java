@@ -17,7 +17,7 @@ public class SchedulerLockTestJob {
     private static final int SYSUSERLEAST = 5*60*1000;
 
 
-    @Scheduled(cron = "0 0/1 * * * ? ")
+    @Scheduled(cron = "0 0 23 * * ? ")
     @SchedulerLock(name = "SchedulerLockTestJob", lockAtMostFor = SYSUSERMOST, lockAtLeastFor = SYSUSERLEAST)
     //任务名称必须唯一 ，lockAtMostFor最长锁表时间：（防止节点奔溃，不释放锁） lockAtLeastFor 最短锁表     //时间,防止任务重复跑
     @Transactional(rollbackFor = Exception.class)
