@@ -13,7 +13,6 @@ import javax.sql.DataSource;
 import java.time.Duration;
 
 @Component
-@MapperScan(basePackages = {"com.example.stack.dao"}, sqlSessionFactoryRef = "mainSqlSessionFactory")
 public class ShedLockConfig {
 
 
