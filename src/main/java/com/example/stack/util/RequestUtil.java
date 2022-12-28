@@ -59,17 +59,4 @@ public class RequestUtil {
         return result;
     }
 
-    public static void main(String[] args) {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String format = formatter.format(new Date());
-        System.out.println(format);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        String format1 = formatter.format(new Date());
-        System.out.println(format1);
-
-    }
 }
